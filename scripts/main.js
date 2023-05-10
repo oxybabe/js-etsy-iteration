@@ -6,22 +6,14 @@
   // ```
   // The average price is $23.86 variables: (total price, average price, total # items)
   //loop through the array
-  // function average(items) {
-  //   sum = 0;
-  //   items.forEach((price) => {
-  //     sum += price;
-  //   });
-  //   return sum / items.length;
-  // }
-  // console.log(average([items]));
+  let totalSum = 0;
+  let averagePrice = 0;
+  totalSum = items.reduce((sum, item) => {
+    sumPrice(sum, item.price), 0;
+    averagePrice = totalSum / items.length;
+    console.log("averagePrice:" + averagePrice);
 
-
-  // function averagePrice(items) {
-  //   const priceItems = items.reduce (
-  //     (items, price) => [...items, ...price], 
-  //   );
-  // };
-
+  });
 
   function averagePrice(items) {
     let sum = 0;
@@ -37,17 +29,18 @@
     return average;
   }
   //2.
+items.forEach(item => print14To18Price(item));
+function print14To18Price(item) 
 
-  
+
   function itemPrice(cost) {
     for (let i = 0; i < items.length; i++) {
       if (items[i].price != null && 14 <= items[i].price <= 18) {
         console.log(items[i]);
       }
     }
-  };
-  console.log(items.filter(itemPrice))
+  }
+  console.log(items.filter(itemPrice));
 
-  
+  //3. Show me how find the item with a "GBP" currency code and print its name and price. Please `console.log` the one you find.
 })();
-
